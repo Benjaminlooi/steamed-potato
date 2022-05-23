@@ -4,6 +4,7 @@
     class="h-screen w-screen p-3 relative overflow-hidden full-screen-wrapper"
   >
     <div
+      ref="interactiveBox"
       class="interactive-box relative overflow-hidden"
       @mousemove="spawnVeenaa($event)"
     >
@@ -69,10 +70,8 @@ export default Vue.extend({
   }),
   methods: {
     spawnVeenaa(e: MouseEvent) {
-      // console.log(e)
-
       // Get the target
-      const target = e.target as HTMLElement
+      const target = this.$refs.interactiveBox as HTMLElement
 
       // Get the bounding rectangle of target
       const rect = target.getBoundingClientRect()
