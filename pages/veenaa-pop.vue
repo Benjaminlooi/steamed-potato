@@ -1,11 +1,14 @@
 <template>
-  <div class="h-screen w-screen" @mousemove="spawnVeenaa($event)">
-    <veenaa
-      v-for="veenaaPop in veenaaList"
-      :key="veenaaPop.id"
-      :veenaa-pop-item="veenaaPop"
-      @expired="removeVeenaa(veenaaPop.id)"
-    />
+  <!-- <div class="h-screen w-screen" @mousemove="spawnVeenaa($event)"> -->
+  <div class="h-screen w-screen p-3 full-screen-wrapper">
+    <div class="interactive-box" @mousemove="spawnVeenaa($event)">
+      <veenaa
+        v-for="veenaaPop in veenaaList"
+        :key="veenaaPop.id"
+        :veenaa-pop-item="veenaaPop"
+        @expired="removeVeenaa(veenaaPop.id)"
+      />
+    </div>
   </div>
 </template>
 
@@ -39,4 +42,15 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.full-screen-wrapper {
+  background-color: #d88787;
+}
+
+.interactive-box {
+  height: 100%;
+  width: 100%;
+  border-radius: 16px;
+  background-color: #e5a7a7;
+}
+</style>
