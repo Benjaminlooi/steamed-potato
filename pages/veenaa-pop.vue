@@ -69,7 +69,19 @@ export default Vue.extend({
   }),
   methods: {
     spawnVeenaa(e: MouseEvent) {
-      this.veenaaList.push({ id: this.count++, x: e.x, y: e.y })
+      // console.log(e)
+
+      // Get the target
+      const target = e.target as HTMLElement
+
+      // Get the bounding rectangle of target
+      const rect = target.getBoundingClientRect()
+
+      // Mouse position
+      const x = e.clientX - rect.left
+      const y = e.clientY - rect.top
+
+      this.veenaaList.push({ id: this.count++, x, y })
     },
     removeVeenaa(veenaaPopID: number) {
       this.veenaaList.splice(
