@@ -17,7 +17,7 @@ export default Vue.extend({
     } as PropOptions<Veenaa>,
   },
   mounted() {
-    setTimeout(() => this.$emit('expired', this.veenaaPopItem.id), 3000)
+    setTimeout(() => this.$emit('expired', this.veenaaPopItem.id), 2400)
   },
 })
 </script>
@@ -31,7 +31,7 @@ export default Vue.extend({
   background-position: center;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  animation: animate 3s linear 1;
+  animation: animate 2.5s linear 1;
   width: 77.4427px;
   height: 77.4427px;
   opacity: 1;
