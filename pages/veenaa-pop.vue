@@ -15,6 +15,8 @@
         @expired="removeVeenaa(veenaaPop.id)"
       />
 
+      <h1 class="title">Veenaa Pop</h1>
+
       <svg
         id="wave"
         style="transform: rotate(0deg); transition: 0.3s"
@@ -93,21 +95,31 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 .full-screen-wrapper {
   background-color: #d88787;
-}
+  font-family: 'Permanent Marker', cursive;
 
-.interactive-box {
-  height: 100%;
-  width: 100%;
-  border-radius: 16px;
-  background-color: #e5a7a7;
-}
+  .interactive-box {
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+    background-color: #e5a7a7;
+  }
 
-#wave {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  opacity: 0.2;
+  .title {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 2rem;
+    color: #d8878769;
+  }
+
+  #wave {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    opacity: 0.2;
+  }
 }
 </style>
