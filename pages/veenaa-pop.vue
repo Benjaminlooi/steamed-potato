@@ -66,6 +66,7 @@ export declare interface Veenaa {
 
 export default Vue.extend({
   components: { veenaa },
+  layout: 'fullscreen',
   data: () => ({
     count: 0,
     veenaaList: [] as Veenaa[],
